@@ -1,0 +1,21 @@
+@import url('./styles/variables.css');
+@import url('./styles/normalize.css');
+@import url('./styles/theme.css');
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 10vw;
+  padding: 0;
+  margin: 0;
+}
+
+.app__site {
+  flex: 1;
+  overflow: auto;
+  padding-top: calc(var(--navbar-height) + 50px);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
