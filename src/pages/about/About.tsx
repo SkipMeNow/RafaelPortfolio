@@ -1,7 +1,6 @@
-import "./home.css";
 import { PageWrapper } from "../../components/PageWrapper";
 
-export const Home = () => {
+export const About = () => {
   return (
     <PageWrapper>
       <div className="home">
@@ -12,5 +11,4 @@ export const Home = () => {
     </PageWrapper>
   );
 };
-
-export default Home;
+export default About;

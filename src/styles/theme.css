@@ -5,20 +5,28 @@
     /* Light theme defaults */
     --bg-color: #3a3a3e;
     --bg-color-op: rgb(59, 59, 63. 0.1);
-    --bg-topbar: #2e2e32;
+    --navbar-bg: #2e2e32;
     --bg-sidemenu: #444448;
     --text-primary: #e0e0e0;
     --text-muted: #a0a0a0;
     --accent: #4e94ce;
     --border-color: #5a5a5e;
+
+    --switchtoggle-color: #232327;
+    --st-nobe-color: #dcdcdc;
+    --st-check-color: #a0a0a0;
 }
 
 body.dark {
     --bg-color: #2a2a2e;
-    --bg-topbar: #1f1f23;
+    --navbar-bg: #1f1f23;
     --bg-sidemenu: #232327;
     --text-primary: #dcdcdc;
     --text-muted: #9a9a9a;
-    --accent: #4e94ce;
+    --accent: #ce4e4e;
     --border-color: #3a3a3e;
+
+    --switchtoggle-color: #9a9a9a;
+    --st-nobe-color: #232327;
+    --st-check-color: #e0e0e0;
 }

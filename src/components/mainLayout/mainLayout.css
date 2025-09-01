@@ -1,6 +1,3 @@
-/* Main layout container */
-/* @import url("../../styles/theme.css"); */
-
 .main-layout {
     display: flex;
     flex-direction: column;
@@ -8,19 +5,12 @@
     background-color: var(--bg-color, red);
     color: var(--text-color, #fff);
     width: 100vw;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
 }
 
-/* Navbar stays fixed at the top */
-.main-layout>.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--navbar-height, 60px);
-    z-index: 1000;
-    /* border-bottom: 1px solid #ddd; */
-    padding: 1rem;
-}
 
 /* Main content offset below navbar */
 .main-layout>main {
@@ -28,17 +18,20 @@
     padding: 2rem;
     max-width: 100vw;
     margin: 0 15px;
-    /* width: 100%; */
-    margin-top: var(--navbar-height, 60px);
-    background-color: var(--bg-color);
+    margin-top: calc(var(--navbar-height, 60px) * 2);
+    background-color: inherit;
 }
 
 /* Optional footer styling */
 .main-layout>footer {
     flex-shrink: 0;
     border-top: 1px solid #ddd;
-    background-color: var(--footer-bg, #fff);
+    background-color: inherit;
     padding: 1rem;
     text-align: center;
     font-size: 0.875rem;
+}
+
+.slider__Test {
+    background-color: blue;
 }
