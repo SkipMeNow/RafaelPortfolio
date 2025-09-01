@@ -37,8 +37,17 @@ export const Navbar: FC<NavbarProps> = ({ showThemeButton = false, links }) => {
 
       {showThemeButton ? (
         <SwitchToggle
-          defaultChecked={theme}
-          onToggle={() => toggleTheme()}
+          defaultChecked={theme === "dark"}
+          onToggle={(checked) => {
+            if (
+              (checked && theme !== "dark") ||
+              (!checked && theme !== "light")
+            ) {
+              toggleTheme();
+            }
+            console.log(theme);
+          }}
+          label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
           styleConfig={{
             backgroundColor: "var(--switchtoggle-color)",
             backgroundCheckedColor: "var(--st-check-color)",

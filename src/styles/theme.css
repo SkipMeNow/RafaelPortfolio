@@ -12,9 +12,9 @@
     --accent: #4e94ce;
     --border-color: #5a5a5e;
 
-    --switchtoggle-color: #232327;
-    --st-nobe-color: #dcdcdc;
-    --st-check-color: #a0a0a0;
+    --switchtoggle-color: #9a9a9a;
+    --st-nobe-color: #232327;
+    --st-check-color: #e0e0e0;
 }
 
 body.dark {
