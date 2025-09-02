@@ -1,0 +1,29 @@
+.link,
+link {
+    font-family: var(--font-family);
+    text-decoration: none;
+    color: var(--text-primary, #fff);
+    width: 50px;
+    text-align: center;
+    padding: var(--padding-sm, 8px);
+    border-radius: var(--border-radius-xlg, 24px);
+    text-wrap: none;
+}
+
+.link__text {
+    color: var(--text-primary, #fff);
+    font-family: var(--font-family);
+}
+
+.link:hover {
+    color: var(--accent, red);
+}
+
+
+.link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.link__active {
+    color: var(--accent, red);
+}

@@ -2,7 +2,6 @@ import { useContext, FC, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./navTransparent.css";
 import { ThemeContext } from "../../contexts/themeContext";
-import { usePageAnimation } from "../../contexts/PageAnimationContext";
 import { SwitchToggle } from "../switchToggle/SwitchToggle";
 
 export interface NavLink {
@@ -25,8 +24,8 @@ export const Navbar: FC<NavbarProps> = ({ showThemeButton = false, links }) => {
         {links?.map(({ path, label }) => (
           <Link
             key={path}
-            className={`navbar__link ${
-              location.pathname === path ? "navbar__active" : ""
+            className={`link ${
+              location.pathname === path ? "link__active" : ""
             }`}
             to={path}
           >
@@ -48,10 +47,9 @@ export const Navbar: FC<NavbarProps> = ({ showThemeButton = false, links }) => {
             console.log(theme);
           }}
           label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+          classNameLabel="link__text"
           styleConfig={{
-            backgroundColor: "var(--switchtoggle-color)",
-            backgroundCheckedColor: "var(--st-check-color)",
-            backgroundBeforeColor: "var(--st-nobe-color)",
+            backgroundCheckedColor: "var(--switchtoggle-bg)",
           }}
         />
       ) : (

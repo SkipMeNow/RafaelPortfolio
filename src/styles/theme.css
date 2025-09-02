@@ -1,32 +1,77 @@
+@import url("./base/link.css");
+
 :root {
-    /* Base tokens */
-    --font-family: 'Inter', sans-serif;
+    /* Typography */
+    --font-family: 'Roboto', sans-serif;
 
-    /* Light theme defaults */
-    --bg-color: #3a3a3e;
-    --bg-color-op: rgb(59, 59, 63. 0.1);
-    --navbar-bg: #2e2e32;
-    --bg-sidemenu: #444448;
-    --text-primary: #e0e0e0;
-    --text-muted: #a0a0a0;
-    --accent: #4e94ce;
-    --border-color: #5a5a5e;
-
-    --switchtoggle-color: #9a9a9a;
-    --st-nobe-color: #232327;
-    --st-check-color: #e0e0e0;
+    /* Layout Backgrounds */
+    --bg-color: #e4e4e4;
+    --navbar-bg: #eaeaec;
+    --bg-sidemenu: #e0e0e2;
+    /* Surface Elements */
+    --card-bg: #ffffff;
+    --modal-bg: #f8f8fa;
+    --hover-bg: rgba(0, 0, 0, 0.3);
+    /* Text */
+    --text-primary: #2a2a2a;
+    --text-muted: #7a7a7a;
+    /* Borders & Dividers */
+    --border-color: #c0c0c2;
+    --divider-color: #d0d0d4;
+    /* Buttons */
+    --button-bg: #e0e0e2;
+    --button-hover-bg: #d4d4d8;
+    --button-text: #2a2a2a;
+    /* Toggles & Switches */
+    --switchtoggle-bg: #d5d5d5;
+    --switchtoggle-thumb: #b0b0b0;
+    /* Accent & Links */
+    --accent: #7c6cc4;
+    --link-color: var(--accent);
+    --link-hover-color: #7c6cc4;
+    /* States & Feedback */
+    --focus-ring: #7c6cc4;
+    --error-color: #d9534f;
+    --success-color: #5cb85c;
 }
 
 body.dark {
+    /* Typography */
+
+    /* Layout Backgrounds */
     --bg-color: #2a2a2e;
     --navbar-bg: #1f1f23;
     --bg-sidemenu: #232327;
+
+    /* Surface Elements */
+    --card-bg: #2f2f33;
+    --modal-bg: #2c2c30;
+    --hover-bg: rgba(255, 255, 255, 0.05);
+
+    /* Text */
     --text-primary: #dcdcdc;
     --text-muted: #9a9a9a;
-    --accent: #ce4e4e;
-    --border-color: #3a3a3e;
 
-    --switchtoggle-color: #9a9a9a;
-    --st-nobe-color: #232327;
-    --st-check-color: #e0e0e0;
+    /* Borders & Dividers */
+    --border-color: #3a3a3e;
+    --divider-color: #444448;
+
+    /* Buttons */
+    --button-bg: #3a3a3e;
+    --button-hover-bg: #4a4a4e;
+    --button-text: #e0e0e0;
+
+    /* Toggles & Switches */
+    --switchtoggle-bg: #3a3a3e;
+    --switchtoggle-thumb: #9a9a9a;
+
+    /* Accent & Links */
+    --accent: #7c6cc4;
+    --link-color: var(--accent);
+    --link-hover-color: #7c6cc4;
+
+    /* States & Feedback */
+    --focus-ring: #7c6cc4;
+    --error-color: #ff4c4c;
+    --success-color: #4caf50;
 }

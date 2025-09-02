@@ -4,6 +4,7 @@ import { Navbar, NavLink } from "../navbar/Navbar";
 // import { Footer } from "../components/footer/Footer"; // optional
 import "./mainLayout.css";
 import { NoiseBackground } from "../effacts/backgrounds/NoiseBackground";
+import "@fontsource/roboto"; // Defaults to weight 400
 
 export function MainLayout() {
   const defaultLinks: NavLink[] = [
@@ -15,7 +16,7 @@ export function MainLayout() {
 
   return (
     <div className="main-layout">
-      <NoiseBackground opacity={0.1} blendMode="normal" baseFrequency={0.9}/>
+      <NoiseBackground opacity={0.1} blendMode="normal" baseFrequency={0.9} />
       <Navbar showThemeButton={true} links={defaultLinks} />
       <main>
         <Outlet />

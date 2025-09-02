@@ -17,24 +17,10 @@
     width: max-content;
     max-width: 100%;
     margin-top: 20px;
-    background-color: transparent;
-    border: 2px solid var(--border-color, #fff);
+    background-color: var(--navbar-bg, #4e4e4e);
+    border: 1px solid var(--border-color, #4e4e4e);
     border-radius: var(--border-radius-xlg, 24px);
-}
-
-.navbar__link {
-    text-decoration: none;
-    color: var(--text-muted, #fff);
     font-size: var(--font-size-m, 16px);
-    width: 50px;
-    text-align: center;
-    padding: var(--padding-sm, 8px);
-    border-radius: var(--border-radius-xlg, 24px);
-}
-
-.navbar__link:hover {
-    color: var(--text-primary, rgb(65, 179, 255));
-    background-color: var(--navbar-bg, rgb(85, 85, 85));
 }
 
 .navbar__links {
@@ -43,29 +29,12 @@
     gap: var(--spacing-md);
 }
 
-.navbar button {
-    text-decoration: none;
-    color: var(--text-muted, #fff);
-    font-size: var(--font-size-m, 16px);
-    text-align: center;
-    padding: var(--padding-sm, 8px);
-    border-radius: var(--border-radius-xlg, 24px);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.navbar button:hover {
-    color: var(--text-primary, rgb(65, 179, 255));
-    background-color: var(--navbar-bg, rgb(85, 85, 85));
-}
-
 .navbar__active {
-    background-color: var(--navbar-bg, rgb(85, 85, 85));
+    /* background-color: var(--hover-bg, gray); */
+    color: var(--accent, red);
 }
 
 .navbar,
-.navbar__link,
 .navbar button {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
