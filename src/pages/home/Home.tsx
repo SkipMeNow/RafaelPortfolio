@@ -1,15 +1,40 @@
 import "./home.css";
-import { PageWrapper } from "../../components/PageWrapper";
 
 export const Home = () => {
   return (
-    <PageWrapper>
-      <div className="home">
-        <h1>Hi, I'm Rafael</h1>
-        <p>Long Prairie, MN</p>
-        <p>I'm a software engineer</p>
+    <div className="home">
+      <div className="home__header">
+        <h1 className="home__title">Hi, I'm Rafael</h1>
+        <p className="home__location-text">Long Prairie, MN</p>
+        <p className="home__location-text">I'm a software engineer</p>
+
+        <div className="home__accent-rect home__accent--1">
+          <div className="home__accent-rect-inner" />
+        </div>
+        <div className="home__accent-rect home__accent--2">
+          <div className="home__accent-rect-inner" />
+        </div>
+
+        <div className="home__accent-rect home__accent--3">
+          <div className="home__accent-rect-inner" />
+        </div>
+
+        <div className="home__accent-rect home__accent--4">
+          <div className="home__accent-rect-inner" />
+        </div>
+
+        <div className="home__accent-rect home__accent--5">
+          <div className="home__accent-rect-inner" />
+        </div>
+
+        <div className="home__accent-rect home__accent--6">
+          <div className="home__accent-rect-inner" />
+        </div>
+        <div className="home__accent-rect home__accent--7">
+          <div className="home__accent-rect-inner" />
+        </div>
       </div>
-    </PageWrapper>
+    </div>
   );
 };
 

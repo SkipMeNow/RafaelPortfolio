@@ -1,17 +1,128 @@
 .home {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    margin-top: 100px;
     color: var(--text-primary, #fff);
-    padding-top: var(--spacing-md, 16px);
+    padding: 0;
 }
 
-.home>h1,
-p {
+.home__header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    gap: var(--spacing-xl, 20px);
+}
+
+.home__title {
+    font-family: var(--font-family, sans-serif);
+    font-size: var(--font-size-header-l, 64px);
     margin: 0;
     padding: 0;
+}
+
+.home__location-text {
+    font-family: var(--font-family, sans-serif);
+    font-size: var(--font-size-m, 16px);
+    margin: 0;
+    padding: 0;
+}
+
+/* Accent rectangles */
+.home__accent-rect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    pointer-events: none;
+}
+
+/* Inner animated layer */
+.home__accent-rect-inner {
+    background-color: rgba(186, 186, 186, 0.9);
+    border-radius: 4px;
+    animation: floatInPlace 6s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes floatInPlace {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-6px) scale(1.05);
+        opacity: 1;
+    }
+}
+
+/* Position + size variants */
+.home__accent--1 {
+    transform: translate(-150px, 60px) rotate(-11deg);
+}
+
+.home__accent--1 .home__accent-rect-inner {
+    width: 40px;
+    height: 40px;
+}
+
+.home__accent--2 {
+    transform: translate(-100px, -150px) rotate(-6deg);
+}
+
+.home__accent--2 .home__accent-rect-inner {
+    width: 60px;
+    height: 60px;
+}
+
+.home__accent--3 {
+    transform: translate(300px, -55px) rotate(11deg);
+}
+
+.home__accent--3 .home__accent-rect-inner {
+    width: 35px;
+    height: 35px;
+}
+
+.home__accent--4 {
+    transform: translate(-298px, -13px) rotate(8deg);
+}
+
+.home__accent--4 .home__accent-rect-inner {
+    width: 50px;
+    height: 50px;
+}
+
+.home__accent--5 {
+    transform: translate(246px, 88px) rotate(-16deg);
+}
+
+.home__accent--5 .home__accent-rect-inner {
+    width: 60px;
+    height: 60px;
+}
+
+.home__accent--6 {
+    transform: translate(-8px, 97px) rotate(-10deg);
+}
+
+.home__accent--6 .home__accent-rect-inner {
+    width: 45px;
+    height: 45px;
+}
+
+.home__accent--7 {
+    transform: translate(49px, -52px) rotate(-3deg);
+}
+
+.home__accent--7 .home__accent-rect-inner {
+    width: 55px;
+    height: 55px;
 }

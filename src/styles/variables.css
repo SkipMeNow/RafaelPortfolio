@@ -7,6 +7,8 @@
     --spacing-xs: 4px;
     --spacing-sm: 8px;
     --spacing-md: 16px;
+    --spacing-l: 16px;
+    
 
     --padding-xs: 4px;
     --padding-sm: 8px;
@@ -15,7 +17,9 @@
     --font-size-s: 8px;
     --font-size-m: 16px;
     --font-size-l: 24px;
-    --font-size-xl: 24px;
+    --font-size-xl: 34px;
+
+    --font-size-header-l: 64px;
 
     --font-size-base: 16px;
     --transition-fast: 0.2s ease-in-out;
