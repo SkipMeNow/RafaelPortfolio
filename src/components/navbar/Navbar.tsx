@@ -1,4 +1,4 @@
-import { useContext, FC, useState } from "react";
+import { useContext, FC } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./navTransparent.css";
 import { ThemeContext } from "../../contexts/themeContext";
@@ -20,19 +20,15 @@ export const Navbar: FC<NavbarProps> = ({ showThemeButton = false, links }) => {
 
   return (
     <div className={`navbar`}>
-      <div className="navbar__links">
-        {links?.map(({ path, label }) => (
-          <Link
-            key={path}
-            className={`link ${
-              location.pathname === path ? "link__active" : ""
-            }`}
-            to={path}
-          >
-            {label}
-          </Link>
-        ))}
-      </div>
+      {links?.map(({ path, label }) => (
+        <Link
+          key={path}
+          className={`link ${location.pathname === path ? "link__active" : ""}`}
+          to={path}
+        >
+          {label}
+        </Link>
+      ))}
 
       {showThemeButton ? (
         <SwitchToggle

@@ -5,30 +5,25 @@
     right: 0;
     height: var(--navbar-height, 60px);
     z-index: 1000;
-    padding: 1rem;
+    padding: var(--padding-sm, 1rem);
     display: flex;
     flex-direction: row;
-    background-color: var(--navbar-bg, red);
+    background-color: var(--navbar-bg, #1f1f23);
     align-items: center;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
-    gap: var(--spacing-md, 15px);
+    gap: var(--spacing-md, 16px);
+    z-index: var(--z-overlay, 100);
 }
 
 .navbar__link {
     text-decoration: none;
-    color: var(--text-primary, #fff);
+    color: var(--text-primary, #dcdcdc);
     font-size: var(--font-size-m, 16px);
 }
 
 .navbar__link:hover {
     color: var(--accent);
-    background-color: aqua;
-}
-
-.navbar__links {
-    display: flex;
-    flex-direction: row;
-    gap: var(--spacing-md);
+    background-color: #ff2f2f;
 }

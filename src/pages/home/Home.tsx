@@ -1,4 +1,5 @@
 import "./home.css";
+import FloatingAccents from "../../components/effacts/floatingAccents/FloatingAccents";
 
 export const Home = () => {
   return (
@@ -8,31 +9,7 @@ export const Home = () => {
         <p className="home__location-text">Long Prairie, MN</p>
         <p className="home__location-text">I'm a software engineer</p>
 
-        <div className="home__accent-rect home__accent--1">
-          <div className="home__accent-rect-inner" />
-        </div>
-        <div className="home__accent-rect home__accent--2">
-          <div className="home__accent-rect-inner" />
-        </div>
-
-        <div className="home__accent-rect home__accent--3">
-          <div className="home__accent-rect-inner" />
-        </div>
-
-        <div className="home__accent-rect home__accent--4">
-          <div className="home__accent-rect-inner" />
-        </div>
-
-        <div className="home__accent-rect home__accent--5">
-          <div className="home__accent-rect-inner" />
-        </div>
-
-        <div className="home__accent-rect home__accent--6">
-          <div className="home__accent-rect-inner" />
-        </div>
-        <div className="home__accent-rect home__accent--7">
-          <div className="home__accent-rect-inner" />
-        </div>
+        <FloatingAccents />
       </div>
     </div>
   );

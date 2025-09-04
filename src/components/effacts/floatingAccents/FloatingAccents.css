@@ -1,0 +1,59 @@
+.floating-accent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    pointer-events: none;
+    width: 40px;
+    height: 40px;
+    z-index: var(--z-accent, 5);
+}
+
+
+.floating-accent__inner {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(98, 98, 98);
+    border-radius: 4px;
+    animation: floatInPlace 6s ease-in-out infinite;
+}
+
+/* Size variants */
+.size--xs {
+    width: 30px;
+    height: 30px;
+}
+
+.size--sm {
+    width: 40px;
+    height: 40px;
+}
+
+.size--md {
+    width: 50px;
+    height: 50px;
+}
+
+.size--lg {
+    width: 60px;
+    height: 60px;
+}
+
+.size--xl {
+    width: 70px;
+    height: 70px;
+}
+
+@keyframes floatInPlace {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-6px) scale(1.05);
+        opacity: 1;
+    }
+}

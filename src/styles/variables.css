@@ -6,23 +6,36 @@
 
     --spacing-xs: 4px;
     --spacing-sm: 8px;
+    /* defualt  */
     --spacing-md: 16px;
-    --spacing-l: 16px;
-    
+    --spacing-lg: 32px;
+    --spacing-xlg: 64px;
+
 
     --padding-xs: 4px;
     --padding-sm: 8px;
+    /* 1rem */
     --padding-md: 16px;
+    --padding-lg: 32px;
 
     --font-size-s: 8px;
     --font-size-m: 16px;
-    --font-size-l: 24px;
-    --font-size-xl: 34px;
+    --font-size-lg: 24px;
+    --font-size-xlg: 32px;
 
-    --font-size-header-l: 64px;
+    --font-size-header-md: 64px;
 
     --font-size-base: 16px;
     --transition-fast: 0.2s ease-in-out;
 
     --navbar-height: 20px;
+
+    --z-base: 0;
+    --z-accent: 5;
+    --z-content: 10;
+    --z-floating: 20;
+    --z-overlay: 100;
+    --z-modal: 1000;
+
+
 }

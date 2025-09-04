@@ -1,0 +1,22 @@
+.about {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+    color: var(--text-primary, #fff);
+    padding: 0;
+    gap: var(--spacing-xlg);
+}
+
+.about__tile {
+    text-align: center;
+    font-size: var(--font-size-header-md, 64px);
+}
+
+.about__area {
+    width: 200px;
+    height: 300px;
+    background-color: red;
+}

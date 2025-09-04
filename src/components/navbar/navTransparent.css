@@ -4,13 +4,13 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 1rem;
+    padding: var(--padding-md, 1rem);
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: var(--spacing-md, 15px);
+    gap: var(--spacing-md, 16px);
 
     height: var(--navbar-height, 60px);
     margin: 0 auto;
@@ -26,7 +26,7 @@
 .navbar__links {
     display: flex;
     flex-direction: row;
-    gap: var(--spacing-md);
+    gap: var(--spacing-md, 16px);
 }
 
 .navbar__active {

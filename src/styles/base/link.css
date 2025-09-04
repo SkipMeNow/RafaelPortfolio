@@ -3,11 +3,10 @@ link {
     font-family: var(--font-family);
     text-decoration: none;
     color: var(--text-primary, #fff);
-    width: 50px;
+    width: fit-content;
     text-align: center;
-    padding: var(--padding-sm, 8px);
+    padding: var(--spacing-xs, 4px);
     border-radius: var(--border-radius-xlg, 24px);
-    text-wrap: none;
 }
 
 .link__text {
