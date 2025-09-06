@@ -1,12 +1,22 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
+
+import { MainLayout } from "./components/mainLayout/MainLayout";
+import { AnimatedPage } from "./components/AnimatedPage";
+
+// Pages
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
-import { MainLayout } from "./components/mainLayout/MainLayout";
-import { motionVariants } from "./utils/animationVariants"; // assuming this exists
+import Project from "./pages/project/Project";
 
 const App = () => {
   const location = useLocation();
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <AnimatePresence mode="wait">
@@ -15,29 +25,25 @@ const App = () => {
           <Route
             path="/"
             element={
-              <motion.div
-                variants={motionVariants.fade}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-              >
+              <AnimatedPage>
                 <Home />
-              </motion.div>
+              </AnimatedPage>
             }
           />
           <Route
-            path="/About"
+            path="/about"
             element={
-              <motion.div
-                variants={motionVariants.fade}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-              >
+              <AnimatedPage>
                 <About />
-              </motion.div>
+              </AnimatedPage>
+            }
+          />
+          <Route
+            path="/projects"
+            element={
+              <AnimatedPage>
+                <Project />
+              </AnimatedPage>
             }
           />
         </Route>

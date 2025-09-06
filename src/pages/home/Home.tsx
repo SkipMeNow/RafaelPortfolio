@@ -1,7 +1,12 @@
-import "./home.css";
+import "./Home.css";
 import FloatingAccents from "../../components/effacts/floatingAccents/FloatingAccents";
+import { HorizontalScroll } from "../../components/effacts/horizontalScroll/HorizontalScroll";
+import icons from "../../utils/programmingLanguagesIcon";
+import programmingLanguagesIcon from "../../utils/programmingLanguagesIcon";
 
 export const Home = () => {
+  const skills = ["javascript", "css", "react", "javascript", "css", "react"];
+
   return (
     <div className="home">
       <div className="home__header">
@@ -11,6 +16,13 @@ export const Home = () => {
 
         <FloatingAccents />
       </div>
+      <HorizontalScroll
+        images={skills.map((lang, index) => ({
+          index: index,
+          src: programmingLanguagesIcon[lang],
+          alt: lang,
+        }))}
+      />
     </div>
   );
 };

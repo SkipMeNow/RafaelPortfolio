@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./switchToggle.css";
+import styles from "./SwitchToggle.module.css";
 
 interface SwitchToggleStyle {
-  backgroundColor?: string | "";
-  backgroundBeforeColor?: string | "";
-  backgroundCheckedColor?: string | "";
+  backgroundColor?: string;
+  backgroundBeforeColor?: string;
+  backgroundCheckedColor?: string;
 }
 
 interface SwitchToggleProps {
@@ -45,13 +45,23 @@ export const SwitchToggle: React.FC<SwitchToggleProps> = ({
   };
 
   return (
-    <label className={`switch-toggle ${classNameBackground}`}>
-      <input type="checkbox" checked={isEnabled} onChange={handleChange} />
-      <span className={`slider ${classNameSider}`} style={sliderStyle}>
-        <span className="knob" style={knobStyle} />
+    <label className={`${styles.switchToggle} ${classNameBackground}`}>
+      <input
+        type="checkbox"
+        checked={isEnabled}
+        onChange={handleChange}
+        className={styles.input}
+      />
+      <span
+        className={`${styles.slider} ${classNameSider}`}
+        style={sliderStyle}
+      >
+        <span className={styles.knob} style={knobStyle} />
       </span>
       {label && (
-        <span className={`switch-label ${classNameLabel}`}>{label}</span>
+        <span className={`${styles.switchLabel} ${classNameLabel}`}>
+          {label}
+        </span>
       )}
     </label>
   );

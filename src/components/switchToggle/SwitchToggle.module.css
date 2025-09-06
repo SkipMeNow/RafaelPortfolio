@@ -1,11 +1,11 @@
-.switch-toggle {
+.switchToggle {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
 }
 
-.switch-toggle input {
+.switchToggle input {
     display: none;
 }
 
@@ -31,12 +31,12 @@
     transition: transform 0.3s;
 }
 
-input:checked+.slider {
+.input:checked+.slider {
     background-color: var(--accent, #4caf50);
 }
 
-input:checked+.slider::before,
-input:checked+.slider .knob {
+.input:checked+.slider::before,
+.input:checked+.slider .knob {
     transform: translateX(20px);
 }
 
