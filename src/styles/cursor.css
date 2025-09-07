@@ -1,0 +1,6 @@
+/* cursor.css */
+
+/* Default custom cursor */
+.cursor-eye {
+  cursor: url('/cursor.svg'), default;
+}

@@ -1,46 +1,61 @@
 import styles from "./HorizontalScroll.module.css";
 
-interface HorizontalScrollImageProps {
+export interface ScrollItemProps {
+  type: "img" | "p";
   index: number;
-  src: string;
+  content: string;
   alt: string;
+  link?: string;
+  className?: string;
 }
 
 interface HorizontalScrollProps {
-  minimumRequired?: number;
-  images?: HorizontalScrollImageProps[];
-  texts?: string[];
+  items: ScrollItemProps[];
+  onItemClick?: (item: ScrollItemProps) => void;
+  className?: string;
 }
 
 export const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
-  minimumRequired = 6,
-  images = [],
-  texts = [],
+  items,
+  onItemClick,
+  className,
 }) => {
-  const shouldAnimate = images.length > minimumRequired;
-  console.log(shouldAnimate);
-  const scrollItems = images;
+  // Duplicate images for seamless scroll loop
+  const scrollItems = [...items, ...items];
 
   return (
-    <div className={styles.scrollContainer}>
-      <div
-        className={`${styles.scrollTrack} ${
-          shouldAnimate ? styles.animate : ""
-        }`}
-      >
-        {scrollItems.map((lang, index) => (
-          <img
-            className={styles.icon}
-            key={`${lang.alt}-${lang.index}-${index}`}
-            src={lang.src}
-            alt={lang.alt}
-          />
-        ))}
-        {texts.map((text, index) => (
-          <span key={`text-${index}`} className={styles.scrollText}>
-            {text}
-          </span>
-        ))}
+    <div className={`${styles.scrollContainer} ${className}`}>
+      <div className={styles.scrollTrack}>
+        {scrollItems?.map((item, index) => {
+          const handleClick = () => {
+            if (onItemClick) onItemClick(item);
+          };
+          switch (item.type) {
+            case "img":
+              return (
+                <div key={`div-${item.index}-${index}`} className={styles.item}>
+                  <img
+                    key={`img-${item.index}-${index}`}
+                    src={item.content}
+                    alt={item.alt || ""}
+                    className={`${styles.icon} ${item.className}`}
+                    onClick={handleClick}
+                  />
+                </div>
+              );
+            case "p":
+              return (
+                <p
+                  key={`p-${item.index}-${index}`}
+                  className={`${styles.scrollText} ${item.className}`}
+                >
+                  {item.content}
+                </p>
+              );
+            default:
+              return null;
+          }
+        })}
       </div>
     </div>
   );

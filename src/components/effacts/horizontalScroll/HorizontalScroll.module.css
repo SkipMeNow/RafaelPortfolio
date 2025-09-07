@@ -1,50 +1,21 @@
 .scrollContainer {
-    display: inline-block;
-    overflow-x: hidden;
-    white-space: nowrap;
-    padding: var(--padding-md, 1rem);
-    gap: var(--spacing-md, 1rem);
-    scroll-snap-type: x mandatory;
-    justify-self: center;
-    align-content: center;
+    overflow: hidden;
+    max-width: 600px;
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    width: 50%;
-    backface-visibility: hidden;
-
 }
 
-.scrollContainer::-webkit-scrollbar {
-    display: none;
-}
 
 .scrollTrack {
-    display: inline-flex;
-    width: fit-content;
-    min-width: 200%;
-    will-change: transform;
-    backface-visibility: hidden;
-    transform-origin: left center;
-
-}
-
-.animate {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
     animation: scrollLeftToRight 40s linear infinite;
+    padding-block: 1rem;
+    gap: 1rem;
 }
 
 .scrollTrack:hover {
     animation-play-state: paused;
-}
-
-.icon {
-    max-width: 64px;
-    max-height: 64px;
-    scroll-snap-align: start;
-}
-
-.scrollText {
-    font-size: 0.875rem;
-    white-space: nowrap;
-    scroll-snap-align: start;
 }
 
 @keyframes scrollLeftToRight {
@@ -53,12 +24,38 @@
     }
 
     100% {
-        transform: translateX(-50%);
+        transform: translateX(calc(-50% - 0.5rem));
     }
 }
 
-@media (max-width: 768px) {
-    .animate {
-        animation-duration: 60s;
-    }
+.item {
+    width: 74px;
+    height: 74px;
+    min-width: 74px;
+    min-height: 74px;
+    background-color: #1c1c1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    margin-right: 1rem;
+    border-radius: 4px;
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.item:hover {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.scrollText {
+    font-size: 0.875rem;
+    white-space: nowrap;
+    margin-right: 1rem;
 }
