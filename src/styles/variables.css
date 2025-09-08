@@ -23,6 +23,7 @@
     --font-size-lg: 24px;
     --font-size-xlg: 32px;
 
+    --font-size-header-sm: 40px;
     --font-size-header-md: 64px;
 
     --font-size-base: 16px;
@@ -36,6 +37,4 @@
     --z-floating: 20;
     --z-overlay: 100;
     --z-modal: 1000;
-
-
 }

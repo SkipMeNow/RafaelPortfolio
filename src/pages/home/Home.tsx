@@ -1,4 +1,4 @@
-import "./home.css";
+import styles from "./home.module.css";
 import FloatingAccents from "../../components/effacts/floatingAccents/FloatingAccents";
 import {
   HorizontalScroll,
@@ -23,16 +23,16 @@ export const Home = () => {
   }
 
   return (
-    <div className="home">
-      <div className="home__header">
-        <h1 className="home__title">Hi, I'm Rafael</h1>
-        <p className="home__location-text">Long Prairie, MN</p>
-        <p className="home__location-text">I'm a software engineer</p>
+    <div className={styles.home}>
+      <div className={styles.home__header}>
+        <h1 className={styles.home__title}>Hi, I'm Rafael</h1>
+        <p className={styles.home__location_text}>Long Prairie, MN</p>
+        <p className={styles.home__location_text}>I'm a software engineer</p>
 
         <FloatingAccents />
       </div>
       <HorizontalScroll
-        className="HorizontalScroll"
+        className="Home__HorizontalScroll"
         items={skills.map((lang, index) => ({
           type: "img",
           index: index,

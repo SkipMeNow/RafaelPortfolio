@@ -2,16 +2,16 @@
     overflow: hidden;
     max-width: 600px;
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    z-index: var(--z-content, 0);
 }
-
 
 .scrollTrack {
     display: flex;
     flex-wrap: nowrap;
     width: max-content;
     animation: scrollLeftToRight 40s linear infinite;
-    padding-block: 1rem;
-    gap: 1rem;
+    padding-block: var(--padding-md, 16px);
+    gap: var(--spacing-md, 16px);
 }
 
 .scrollTrack:hover {
@@ -24,7 +24,7 @@
     }
 
     100% {
-        transform: translateX(calc(-50% - 0.5rem));
+        transform: translateX(calc(-50% - var(--spacing-sm, 8px)));
     }
 }
 
@@ -37,9 +37,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4px;
-    margin-right: 1rem;
-    border-radius: 4px;
+    padding: var(--padding-xs, 4px);
+    margin-right: var(--spacing-md, 16px);
+    border-radius: var(--border-radius-sm, 4px);
+    transition: width var(--transition-fast, 0.2s ease-in-out), height var(--transition-fast, 0.2s ease-in-out);
 }
 
 .icon {
@@ -55,7 +56,36 @@
 }
 
 .scrollText {
-    font-size: 0.875rem;
+    font-size: var(--font-size-m, 14px);
     white-space: nowrap;
-    margin-right: 1rem;
+    margin-right: var(--spacing-md, 16px);
+}
+
+@media (max-width: 768px) {
+    .scrollContainer {
+        max-width: 100%;
+        padding-inline: var(--padding-sm, 8px);
+    }
+
+    .scrollTrack {
+        gap: var(--spacing-sm, 8px);
+        padding-block: var(--padding-sm, 8px);
+    }
+
+    .item {
+        width: 64px;
+        height: 64px;
+        min-width: 64px;
+        min-height: 64px;
+    }
+
+    .icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .scrollText {
+        font-size: var(--font-size-s, 12px);
+        margin-right: var(--spacing-sm, 8px);
+    }
 }
