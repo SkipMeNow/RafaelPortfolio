@@ -1,4 +1,4 @@
-import "./Home.css";
+import "./home.css";
 import FloatingAccents from "../../components/effacts/floatingAccents/FloatingAccents";
 import {
   HorizontalScroll,
