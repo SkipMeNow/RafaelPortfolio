@@ -37,6 +37,14 @@ const App = () => {
               </AnimatedPage>
             }
           />
+          <Route
+            path="*"
+            element={
+              <AnimatedPage>
+                <div>404: Page not found</div>
+              </AnimatedPage>
+            }
+          />
         </Route>
       </Routes>
     </AnimatePresence>
