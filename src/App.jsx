@@ -8,7 +8,6 @@ import { AnimatedPage } from "./components/AnimatedPage";
 // Pages
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
-import Project from "./pages/project/Project";
 
 const App = () => {
   const location = useLocation();
@@ -35,14 +34,6 @@ const App = () => {
             element={
               <AnimatedPage>
                 <About />
-              </AnimatedPage>
-            }
-          />
-          <Route
-            path="/projects"
-            element={
-              <AnimatedPage>
-                <Project />
               </AnimatedPage>
             }
           />
