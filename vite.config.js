@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/", // Use "/" for local, "/RafaelPortfolio" for Netlify
+  base: "/RafaelPortfolio", // Use "/" for local, "/RafaelPortfolio" for Netlify
   resolve: {
     alias: {
       "@components": path.resolve(__dirname, "src/components"),
