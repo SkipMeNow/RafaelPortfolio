@@ -1,5 +1,5 @@
 import React from "react";
-import "./FloatingAccents.css";
+import "./floatingAccents.css";
 
 type AccentConfig = {
   id: number;

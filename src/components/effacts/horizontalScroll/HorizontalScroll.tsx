@@ -1,4 +1,4 @@
-import styles from "./HorizontalScroll.module.css";
+import styles from "./horizontalScroll.module.css";
 
 export interface ScrollItemProps {
   type: "img" | "p";

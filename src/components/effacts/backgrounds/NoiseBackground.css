@@ -3,7 +3,7 @@
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image: url("/animated-noise.gif");
+  /* background-image: url("/animated-noise.gif"); */
   /* or .webm via <video> */
   background-repeat: repeat;
   background-size: cover;

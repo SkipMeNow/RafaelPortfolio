@@ -1,5 +1,5 @@
 import React from "react";
-import "./NoiseBackground.css";
+import "./noiseBackground.css";
 
 interface NoiseBackgroundProps {
   opacity?: number; // 0 to 1
