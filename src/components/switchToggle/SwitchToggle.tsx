@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./SwitchToggle.module.css";
+import styles from "./switchToggle.module.css";
 
 interface SwitchToggleStyle {
   backgroundColor?: string;

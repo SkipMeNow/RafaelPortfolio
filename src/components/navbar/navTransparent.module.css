@@ -30,7 +30,6 @@
 }
 
 .navbar__active {
-    /* background-color: var(--hover-bg, gray); */
     color: var(--accent, red);
 }
 

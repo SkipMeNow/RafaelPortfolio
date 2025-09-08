@@ -12,12 +12,13 @@ link {
 .link__text {
     color: var(--text-primary, #fff);
     font-family: var(--font-family);
+    font-size: var(--font-size-m, 1rem);
 }
 
 .link:hover {
-    color: var(--accent, red);
+    color: var(--hover-bg, red);
+    font-size: calc(var(--font-size-m, 1rem) + 1px);
 }
-
 
 .link {
     transition: background-color 0.3s ease, color 0.3s ease;

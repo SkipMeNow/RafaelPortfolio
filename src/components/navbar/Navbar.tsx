@@ -1,6 +1,6 @@
 import { useContext, FC } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./navTransparent.css";
+import styles from "./navTransparent.module.css";
 import { ThemeContext } from "../../contexts/themeContext";
 import { SwitchToggle } from "../switchToggle/SwitchToggle";
 
@@ -19,7 +19,7 @@ export const Navbar: FC<NavbarProps> = ({ showThemeButton = false, links }) => {
   const location = useLocation();
 
   return (
-    <div className={`navbar`}>
+    <div className={styles.navbar}>
       {links?.map(({ path, label }) => (
         <Link
           key={path}
