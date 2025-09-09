@@ -1,0 +1,121 @@
+.navbar {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: calc(100% - 2rem);
+
+
+    z-index: 1000;
+    padding: var(--padding-md, 1rem);
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md, 16px);
+
+    height: var(--navbar-height, 60px);
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    background-color: var(--navbar-bg, #4e4e4e);
+    border: 1px solid var(--border-color, #4e4e4e);
+    border-radius: var(--border-radius-xlg, 24px);
+
+    font-size: var(--font-size-m, 16px);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.scrolled {
+    background-color: rgba(78, 78, 78, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-md, 16px);
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    /* font-size: calc(var(--font-size-m, 16px) + 1px); */
+    color: var(--accent, red)
+}
+
+.linkActive {
+    color: var(--accent, red);
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent, red);
+}
+
+.linkText {
+    font-size: inherit;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: var(--accent, white);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .mobile .navLinks {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--navbar-bg);
+        min-width: 200px;
+        max-width: calc(100% - 2rem);
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .mobile .navLinks.open {
+        display: flex;
+        flex-direction: column;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}

@@ -1,0 +1,7 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    padding: var(--padding-lg);
+}

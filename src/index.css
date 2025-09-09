@@ -1,30 +1,38 @@
 @import url('./styles/variables.css');
 @import url('./styles/normalize.css');
 @import url('./styles/theme.css');
-@import url("./styles/base/link.css");
+@import url('./styles/base/link.css');
 
-.app {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  max-width: 10vw;
-  padding: 0;
+/* ===== Global Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  z-index: var(--z-base, 100);
+  padding: 0;
 }
 
-.app__site {
-  flex: 1;
-  overflow: auto;
-  padding-top: calc(var(--navbar-height) + 50px);
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  z-index: var(--z-base, 10);
+/* ===== Root Defaults (fallbacks if variables.css fails) ===== */
+:root {
+  --font-family: sans-serif;
+  --font-size-m: 16px;
+  --background: #121212;
+  --text-primary: #fff;
 }
 
-body,
+/* ===== Base HTML & Body ===== */
 html {
-  font-family: var(--font-family);
-  z-index: var(--z-base, 10);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family, sans-serif);
+  font-size: var(--font-size-m, 16px);
+  background-color: var(--background, #121212);
+  color: var(--text-primary, #fff);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
 }

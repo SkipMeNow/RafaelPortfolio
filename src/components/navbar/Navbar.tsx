@@ -1,8 +1,7 @@
 import { useContext, FC, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import clsx from "clsx";
-import styles from "./navTransparent.module.css";
-import mobileStyles from "./navMobile.module.css";
+import styles from "./navbar.module.css"; // unified CSS module
 import { ThemeContext } from "../../contexts/themeContext";
 import { SwitchToggle } from "../switchToggle/SwitchToggle";
 
@@ -24,61 +23,57 @@ export const Navbar: FC<NavbarProps> = ({
   const location = useLocation();
   const isActive = (to: string) => location.pathname === to;
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-      if (window.innerWidth > 768) setMenuOpen(false); // close menu on desktop
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    const onScroll = () => setScrolled(window.scrollY > 10);
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+      window.removeEventListener("scroll", onScroll);
     };
-    window.addEventListener("resize", handleResize);
-    //for testing
-    setIsMobile(true);
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  //for testing
-  const activeStyles = mobileStyles;
-  // const activeStyles = isMobile ? mobileStyles : styles;
-
   return (
-    <div className={activeStyles.navbar}>
+    <div
+      className={clsx(styles.navbar, {
+        [styles.mobile]: isMobile,
+        [styles.scrolled]: scrolled,
+      })}
+    >
       {isMobile && (
-        <label className={activeStyles.hamburger}>
-          <input
-            type="checkbox"
-            onChange={() => setMenuOpen((prev) => !prev)}
-          />
-          <span />
-          <span />
-          <span />
-        </label>
-
-        // <button
-        //   className={`${activeStyles.hamburger} ${
-        //     menuOpen ? activeStyles.open : ""
-        //   }`}
-        //   onClick={() => setMenuOpen((prev) => !prev)}
-        //   aria-label="Toggle menu"
-        // >
-        //   <span />
-        //   <span />
-        //   <span />
-        // </button>
+        <button
+          className={clsx(styles.hamburger, { [styles.open]: menuOpen })}
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       )}
 
       <nav
-        className={clsx(activeStyles.navLinks, {
-          [activeStyles.open]: menuOpen,
+        className={clsx(styles.navLinks, {
+          [styles.open]: menuOpen,
         })}
       >
         {links.map(({ path, label }) => (
           <Link
             key={path}
-            className={clsx("link", { link__active: isActive(path) })}
+            className={clsx(styles.link, {
+              [styles.linkActive]: isActive(path),
+            })}
             to={path}
-            onClick={() => setMenuOpen(false)} // close menu after click
+            onClick={() => setMenuOpen(false)}
           >
             {label}
           </Link>
@@ -94,7 +89,7 @@ export const Navbar: FC<NavbarProps> = ({
               if (shouldToggle) toggleTheme();
             }}
             label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-            classNameLabel="link__text"
+            classNameLabel={styles.linkText}
             styleConfig={{
               backgroundCheckedColor: "var(--switchtoggle-bg)",
             }}

@@ -26,10 +26,15 @@
     --font-size-header-sm: 40px;
     --font-size-header-md: 64px;
 
+    --img-size-s: 24px;
+    --img-size-md: 32px;
+    --img-size-lg: 64px;
+    --img-size-xlg: 100px;
+
     --font-size-base: 16px;
     --transition-fast: 0.2s ease-in-out;
 
-    --navbar-height: 20px;
+    --navbar-height: 50px;
 
     --z-base: 0;
     --z-accent: 5;

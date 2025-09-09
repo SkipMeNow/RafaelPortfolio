@@ -12,6 +12,7 @@ export function MainLayout() {
     { path: "/About", label: "About" },
     { path: "/Projects", label: "Projects" },
     { path: "/Contact", label: "Contact" },
+    { path: "/experience", label: "Experience" },
   ];
 
   return (

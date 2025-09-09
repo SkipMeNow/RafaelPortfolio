@@ -26,13 +26,13 @@ export const Home = () => {
     <div className={styles.home}>
       <div className={styles.home__header}>
         <h1 className={styles.home__title}>Hi, I'm Rafael</h1>
-        <p className={styles.home__location_text}>Long Prairie, MN</p>
-        <p className={styles.home__location_text}>I'm a software engineer</p>
-
+        <p className={styles.home__locationText}>Long Prairie, MN</p>
+        <p className={styles.home__locationText}>I'm a software engineer</p>
         <FloatingAccents />
       </div>
+
       <HorizontalScroll
-        className="Home__HorizontalScroll"
+        className={styles.home__horizontalScroll}
         items={skills.map((lang, index) => ({
           type: "img",
           index: index,
