@@ -1,12 +1,69 @@
-# React + Vite
+# ⚡️ Portfolio Frontend — Built with React, TypeScript & Motion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modular, scalable frontend portfolio built with React, TypeScript, and Framer Motion. It showcases expressive UI components, animated page transitions, and a clean layout system designed for future-proofing and growth.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Modular Layouts** — Shared `MainLayout` with ambient background, responsive navbar, and route outlet
+- **Animated Routing** — Smooth page transitions using `AnimatePresence` and `AnimatedPage` wrappers
+- **Centralized Config** — Unified `routes.config.tsx` for navigation links and route definitions
+- **Responsive Design** — Mobile-friendly layout with scalable spacing and typography tokens
+- **Custom Icons** — Language and tool icons mapped via `programmingLanguagesIcon.ts`
+- **Design Tokens** — CSS variables for spacing, colors, and sizing to support theming
+- **Error Boundaries** — Graceful fallback UI for rendering errors
+- **Consistent Naming** — Uses `.component.tsx`, `.types.ts`, and `.module.css` for clarity and scalability
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ Functionality
+
+### 1. Animated Routing
+
+Routes are defined in `routes.config.tsx` and rendered via React Router v6.  
+Each page is wrapped in `AnimatedPage` for smooth transitions using Framer Motion.  
+`MainLayout` provides shared UI framing, ambient background, and consistent layout structure.
+
+### 2. Centralized Navigation
+
+Navigation links and route definitions are unified in `routes.config.tsx`.  
+`Navbar.component.tsx` dynamically renders links and includes a theme toggle for user preference.
+
+### 3. Error Handling
+
+`ErrorBoundary.component.tsx` catches rendering errors and displays fallback UI.  
+Prevents full app crashes and improves resilience across routed views.
+
+### 4. Icon Mapping
+
+`programmingLanguagesIcon.ts` maps tech/tool names to their respective image assets.  
+Used in experience and skill components for visual clarity and semantic styling.
+
+### 5. Responsive Layout
+
+`MainLayout.module.css` handles layout padding, max-width, and mobile responsiveness.  
+CSS variables (`--spacing`, `--font-size`, etc.) support design token theming and future scalability.
+
+### 6. Consistent File Structure
+
+Components follow a clear naming convention:
+
+- `.component.tsx` for UI logic and markup
+- `.types.ts` for prop interfaces and shared types
+- `.module.css` for scoped styling  
+  This promotes maintainability, readability, and modular growth.
+
+---
+
+## 🧱 Tech Stack
+
+| Tool               | Purpose                         |
+| ------------------ | ------------------------------- |
+| React + TypeScript | Core UI and type safety         |
+| React Router       | Declarative routing             |
+| Framer Motion      | Page transitions and animations |
+| CSS Modules        | Scoped styling per component    |
+| @fontsource/roboto | Typography without external CDN |
+
+---
