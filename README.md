@@ -76,4 +76,4 @@ This project was built with Netlify in mind as the primary deployment platform. 
 
 The live version hosted on **Netlify** reflects an earlier build due to exceeding the credit limit on the account. Some newer features or refinements may not be visible in that deployment.
 
-Visit the [live Netlify site](rafaelambriz.netlify.app) to see the deployed version.
+Visit the [live Netlify site](https://rafaelambriz.netlify.app/) to see the deployed version.
