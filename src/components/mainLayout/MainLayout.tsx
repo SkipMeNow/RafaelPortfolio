@@ -1,27 +1,19 @@
-// src/layouts/MainLayout.tsx
 import { Outlet } from "react-router-dom";
-import { Navbar, NavLink } from "../navbar/Navbar";
-// import { Footer } from "../components/footer/Footer"; // optional
+import { Navbar } from "../navbar/Navbar.component";
 import "./mainLayout.css";
 import { NoiseBackground } from "../effacts/backgrounds/NoiseBackground";
-import "@fontsource/roboto"; // Defaults to weight 400
+import { navLinks } from "../../config/routes.config";
+import "@fontsource/roboto";
 
 export function MainLayout() {
-  const defaultLinks: NavLink[] = [
-    { path: "/", label: "Home" },
-    { path: "/About", label: "About" },
-    { path: "/Projects", label: "Projects" },
-    { path: "/Contact", label: "Contact" },
-    { path: "/experience", label: "Experience" },
-  ];
-
   return (
     <div className="main-layout">
       <NoiseBackground opacity={0.1} blendMode="normal" baseFrequency={0.9} />
-      <Navbar showThemeButton={true} links={defaultLinks} />
-      <main>
+      <Navbar showThemeButton={true} links={navLinks} />
+      <main className="main-layout__content">
         <Outlet />
       </main>
+      {/* Optional: <Footer /> */}
     </div>
   );
 }

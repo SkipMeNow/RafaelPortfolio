@@ -1,10 +1,8 @@
 import styles from "./home.module.css";
 import FloatingAccents from "../../components/effacts/floatingAccents/FloatingAccents";
-import {
-  HorizontalScroll,
-  ScrollItemProps,
-} from "../../components/effacts/horizontalScroll/HorizontalScroll";
+import { HorizontalScroll } from "../../components/effacts/horizontalScroll/Horizontal-Scroll.component";
 import programmingLanguagesIcon from "../../utils/programmingLanguagesIcon";
+import { ScrollItemProps } from "../../components/effacts/horizontalScroll/horizontal-Scroll.types";
 
 export const Home = () => {
   const skills = [

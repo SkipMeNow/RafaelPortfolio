@@ -1,19 +1,5 @@
-import styles from "./horizontalScroll.module.css";
-
-export interface ScrollItemProps {
-  type: "img" | "p";
-  index: number;
-  content: string;
-  alt: string;
-  link?: string;
-  className?: string;
-}
-
-interface HorizontalScrollProps {
-  items: ScrollItemProps[];
-  onItemClick?: (item: ScrollItemProps) => void;
-  className?: string;
-}
+import styles from "./horizontal-Scroll.module.css";
+import { HorizontalScrollProps } from "./horizontal-Scroll.types";
 
 export const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
   items,

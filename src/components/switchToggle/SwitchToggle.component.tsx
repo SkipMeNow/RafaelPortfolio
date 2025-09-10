@@ -1,21 +1,6 @@
 import { useState } from "react";
 import styles from "./switchToggle.module.css";
-
-interface SwitchToggleStyle {
-  backgroundColor?: string;
-  backgroundBeforeColor?: string;
-  backgroundCheckedColor?: string;
-}
-
-interface SwitchToggleProps {
-  defaultChecked?: boolean;
-  onToggle?: (checked: boolean) => void;
-  label?: string;
-  classNameLabel?: string;
-  classNameSider?: string;
-  classNameBackground?: string;
-  styleConfig?: SwitchToggleStyle;
-}
+import { SwitchToggleProps } from "./switchToggle.types";
 
 export const SwitchToggle: React.FC<SwitchToggleProps> = ({
   defaultChecked = false,

@@ -2,18 +2,9 @@ import { useContext, FC, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import clsx from "clsx";
 import styles from "./navbar.module.css"; // unified CSS module
-import { ThemeContext } from "../../contexts/themeContext";
-import { SwitchToggle } from "../switchToggle/SwitchToggle";
-
-export interface NavLink {
-  path: string;
-  label: string;
-}
-
-interface NavbarProps {
-  showThemeButton?: boolean;
-  links?: NavLink[];
-}
+import { ThemeContext } from "../../contexts/themeContext.jsx";
+import { SwitchToggle } from "../switchToggle/SwitchToggle.component";
+import { NavbarProps } from "./navbar.types";
 
 export const Navbar: FC<NavbarProps> = ({
   showThemeButton = false,
