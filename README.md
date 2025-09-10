@@ -67,3 +67,13 @@ Components follow a clear naming convention:
 | @fontsource/roboto | Typography without external CDN |
 
 ---
+
+## 🚀 Deployment
+
+This project was built with Netlify in mind as the primary deployment platform. **Netlif** supports client-side routing and custom redirects out of the box, making it ideal for React applications with dynamic navigation.
+
+> ⚠️ **Note:** GitHub Pages was not the intended deployment target for this project. While it may be possible to adapt the setup, the current architecture was optimized for Netlify.
+
+The live version hosted on **Netlify** reflects an earlier build due to exceeding the credit limit on the account. Some newer features or refinements may not be visible in that deployment.
+
+Visit the [live Netlify site](rafaelambriz.netlify.app) to see the deployed version.
